@@ -3,6 +3,6 @@
     define("HOST","LOCALHOST");
     define("USER","root");
     define("PASS","");
-    define("DB","proyecto154");
+    define("DB","proyecto");
     define("CHARSET","utf8");
 ?>

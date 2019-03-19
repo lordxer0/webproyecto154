@@ -15,7 +15,7 @@ if($_POST){
 	$pass=$password[0];
 
 
-	$sql = "select nombre_usuario,contraseña,cargo from usuario where nombre_usuario = '$name'";
+	$sql = "select nombre,contraseña,cargo from usuario where nombre = '$name'";
 
 	$conexion = new Connection();
 	$rs = $conexion->query($sql);
@@ -23,7 +23,7 @@ if($_POST){
 	if($rs !=null){
 		$row = $rs->fetch_assoc();
 
-		if ($row['nombre_usuario']==$name && $row['contraseña']==$pass) { 
+		if ($row['nombre']==$name && $row['contraseña']==$pass) { 
 			if($row['cargo']=="administrador"){
 
 				$_SESSION['administrador'];

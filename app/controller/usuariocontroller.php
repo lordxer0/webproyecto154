@@ -16,20 +16,20 @@ class usuariocontroller{
 
     public function all(){
         $usuarios = usuario::getall();
-        include '../../public/views/usuarios/IndexUsuario.php';
+        include '../../public/views/usuarios/listaUsuario.php';
     }
 
     public function create(){
 		if (isset($_POST["val"])){
 			$usuario = new usuario();
-			$usuario->cedula = $_POST["cedula"];  //la asignacion es de la clase cliente y se coloca como se definio 
-			$usuario->nombre_usuario = $_POST["nombre_usuario"];	//dentro del POST se coloca el name de la columna definida de el archivo create
-			$usuario->contraseña = $_POST["contraseña"];
-			$usuario->correo = $_POST["correo"];
-			$usuario->fecha = $_POST["fecha"];
+			$usuario->ID_Usuario = $_POST["id"];  //la asignacion es de la clase cliente y se coloca como se definio 
+			$usuario->nombre = $_POST["nombre"];	//dentro del POST se coloca el name de la columna definida de el archivo create
+			$usuario->fecha_nacimiento = $_POST["fecha"];
 			$usuario->genero = $_POST["genero"];
+			$usuario->telefono = $_POST["tel"];
 			$usuario->cargo = $_POST["cargo"];
-			$usuario->telefono = $_POST["telefono"];
+			$usuario->email = $_POST["email"];
+			$usuario->contraseña = $_POST["contraseña"];
 			$usuario->estado = $_POST["estado"];
 
 			$res = $usuario->create();
@@ -40,9 +40,9 @@ class usuariocontroller{
 			}
 
 			$usuarios = usuario::getall();
-			include '../../public/views/usuarios/IndexUsuario.php';
+			include '../../public/views/usuarios/listaUsuario.php';
 		} else{
-			include '../../public/views/usuarios/talvez.php';
+			include '../../public/views/usuarios/IndexUsuario.php';
 		}
 	}
 

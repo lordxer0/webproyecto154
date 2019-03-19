@@ -4,14 +4,14 @@ require_once "../db/connection.php";
 
 class usuario{
 
-    public $cedula;
-    public $nombre_usuario;
-    public $contraseña;
-    public $correo;
-    public $fecha;
+    public $ID_Usuario;
+    public $nombre;
+    public $fecha_nacimiento;
     public $genero;
-    public $cargo;
     public $telefono;
+    public $cargo;
+    public $email;
+    public $contraseña;
     public $estado;
 
     public static function getall(){
@@ -23,8 +23,8 @@ class usuario{
         return $rs;
     }
 
-    public static function findced($cedula){
-        $sql = "select * from usuario where ID_Usuario = '$cedula'";
+    public static function findced($ID_Usuario){
+        $sql = "select * from usuario where ID_Usuario = '$ID_Usuario'";
 
         $con = new connection();
 	    $rs = $con->query($sql);
@@ -33,8 +33,8 @@ class usuario{
     return $rs;
     }
 
-    public static function delete($cedula){
-        $sql = "delete from usuario where ID_Usuario = '$cedula'";
+    public static function delete($ID_Usuario){
+        $sql = "delete from usuario where ID_Usuario = '$ID_Usuario'";
   
         $con = new connection();
         $rs = $con->execute($sql);
@@ -44,14 +44,14 @@ class usuario{
     }
   
     public function create(){
-        $sql = "insert into usuario values($this->cedula,
-        '$this->nombre_usuario',
-        '$this->contraseña',
-        '$this->correo',
-        '$this->fecha',
+        $sql = "insert into usuario values($this->ID_Usuario,
+        '$this->nombre',
+        '$this->fecha_nacimiento',
         '$this->genero',
-        '$this->cargo',
         '$this->telefono',
+        '$this->cargo',
+        '$this->email',
+        '$this->contraseña',
         $this->estado)";
   
         $con = new connection();
@@ -63,15 +63,15 @@ class usuario{
   
     public function update(){
         $sql ="update usuario set 
-        nombre_usuario = '$this->nombre_usuario',
-        contraseña = '$this->contraseña',
-        email = '$this->correo',
-        fecha_nacimiento = '$this->fecha',
+        nombre = '$this->nombre',
+        fecha_nacimiento = '$this->fecha_nacimiento',
         genero = '$this->genero',
-        cargo = '$this->cargo',
         telefono = '$this->telefono',
+        cargo = '$this->cargo',
+        email = '$this->email',
+        contraseña = '$this->contraseña',
         estado_usuario = '$this->estado'
-        where ID_Usuario = '$this->cedula'";
+        where ID_Usuario = '$this->ID_Usuario'";
   
         $con = new connection();
         $rs = $con->execute($sql);

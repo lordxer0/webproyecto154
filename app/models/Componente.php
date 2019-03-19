@@ -87,7 +87,7 @@ public function updateCerrar(){
 }
 
 public function updateEstado(){
-	$sql = "update componentes set estado_componente = '$this->estado' 
+	$sql = "update componentes set estado = '$this->estado' 
 	WHERE ID_Componentes = '$this->ID_Componentes'";
 //echo $sql;
 	$con = new connection();

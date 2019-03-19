@@ -15,7 +15,7 @@ document.body.innerHTML = "<h6>La hora es:  " + d.getHours() + ":" + d.getMinute
 "</h6>"
 </script>
 
-<form action="/domoticSENA/app/controllers/ComponenteController.php?action=create" method="post">
+<!-- <form action="/domoticSENA/app/controllers/ComponenteController.php?action=create" method="post">
 <input type="hidden" name="opcion" value="create">
 <div class="row">
     <div class="input-field col s2">
@@ -29,9 +29,9 @@ document.body.innerHTML = "<h6>La hora es:  " + d.getHours() + ":" + d.getMinute
       <option value="" disabled selected>Elige ubicacion</option>
 
       <?php 
-      while ($combo2 = $ambientes -> fetch_assoc()) {
-        echo "<option value=" . $combo2["ID_Ambiente"] . ">" . $combo2["nombreambiente"] . "</option>";
-      }
+      // while ($combo2 = $ambientes -> fetch_assoc()) {
+      //   echo "<option value=" . $combo2["ID_Ambiente"] . ">" . $combo2["nombreambiente"] . "</option>";
+      // }
       ?>
 
     </select>
@@ -47,9 +47,9 @@ document.body.innerHTML = "<h6>La hora es:  " + d.getHours() + ":" + d.getMinute
     <br><br>
     <button class="btn waves-effect waves-light" type"submit" >Agregar</button>
     </div>
-</form>
+</form> -->
    
-      <div class="col s10">
+<div class="col s10">
       <br><br>
 
       <table>
@@ -64,14 +64,14 @@ document.body.innerHTML = "<h6>La hora es:  " + d.getHours() + ":" + d.getMinute
         <?php 
         while ($tabla = $componentes -> fetch_assoc()) {
           echo "<tr>";
-          echo "<td>" . $tabla["nombre_componente"] . "</td>";
-          echo "<td>" . $tabla["estado_componente"] . "</td>";
+          echo "<td>" . $tabla["nombre"] . "</td>";
+          echo "<td>" . $tabla["estado"] . "</td>";
           
-          echo "<td><a href='/domoticSENA/app/controller/ComponenteController.php?action=updateEstado&ID_Componentes=" . $tabla["ID_Componentes"] . "&estado_componente=" . $tabla["estado_componente"] . "' class='waves-effect waves-yellow pink btn' >Cambiar</a></td>";
+          echo "<td><a href='/interfase_componentes/app/controllers/ComponenteController.php?action=updateEstado&ID_Componentes=" . $tabla["ID_Componentes"] . "&estado=" . $tabla["estado"] . "' class='waves-effect waves-yellow pink btn' >Cambiar</a></td>";
           
           echo "<td>" . $tabla["abrir_cerrar"] . "</td>";
           
-          echo "<td><a href='/domoticSENA/app/controller/ComponenteController.php?action=updateCerrar&ID_Componentes=" . $tabla["ID_Componentes"] . "&abrir_cerrar=" . $tabla["abrir_cerrar"] . "' class='waves-effect waves-yellow pink btn' >Cambiar</a></td>";
+          echo "<td><a href='/interfase_componentes/app/controllers/ComponenteController.php?action=updateCerrar&ID_Componentes=" . $tabla["ID_Componentes"] . "&abrir_cerrar=" . $tabla["abrir_cerrar"] . "' class='waves-effect waves-yellow pink btn' >Cambiar</a></td>";
           
           echo "</tr>";
         }
@@ -81,8 +81,8 @@ document.body.innerHTML = "<h6>La hora es:  " + d.getHours() + ":" + d.getMinute
     </div>
 </div>
 
-  <script src="/domoticSENA/public/js/jquery.min.js"></script>
-	<script src="/domoticSENA/public/js/materialize.min.js"></script>
+<script src="/interfase_componentes/public/js/jquery.min.js"></script>
+<script src="/interfase_componentes/public/js/materialize.min.js"></script>
 <script>
 $(document).ready(function(){
     $('select').formSelect();

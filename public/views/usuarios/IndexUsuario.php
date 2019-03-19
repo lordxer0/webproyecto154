@@ -16,38 +16,38 @@
 			<input type="radio" name="estado" value="un">Consultar usuario<br>	
     </div>
     <div class="col-sm-7">
-    <form action="/paz/proyecto/app/controllers/usuariocontroller.php?action=create" method="post">
+    <form action="/domoticSENA/app/controller/usuariocontroller.php?action=create" method="post">
       <div class="form-group">
-       <li><label for="cd">Cedula</label></li>
-        <input type="number" id="cd" class="form-control col-sm-9" name="cedula"><br>
+       <li><label for="cd">ID_Usuario</label></li>
+        <input type="number" id="id" class="form-control col-sm-9" ><br>
        </div>
       <div class="form-group">
-        <li><label for="nu">Nombre Usuario</label></li>
-        <input type="text" id="nu" class="form-control col-sm-9" name="nombre_usuario"><br>
+        <li><label for="nu">Nombre</label></li>
+        <input type="text" id="nombre" class="form-control col-sm-9" ><br>
        </div>
        <div class="form-group">
-       <li><label for="con">Contraseña</label></li>
-        <input type="text" id="con" class="form-control col-sm-9" name="contraseña"><br>
+       <li><label for="con">Fecha Nacimiento</label></li>
+        <input type="date" id="fecha" class="form-control col-sm-9" ><br>
        </div>
        <div class="form-group">
-       <li><label for="ce">Correo Electronico</label></li>
-        <input type="email" id="ce" class="form-control col-sm-9" name="correo"><br>
+       <li><label for="ce">Genero</label></li>
+        <input type="text" id="genero" class="form-control col-sm-9" ><br>
        </div>
        <div class="form-group">
-       <li><label for="fecha">Fecha de Nacimiento</label></li>
-        <input type="date" id="fecha" class="form-control col-sm-3" name="fecha"><br>
+       <li><label for="fecha">Telefono</label></li>
+        <input type="number" id="tel" class="form-control col-sm-3" ><br>
        </div>
        <div class="form-group">
-       <li><label for="gen">Genero</label></li>
-        <input type="text" id="gen" class="form-control col-sm-9" name="genero"><br>
+       <li><label for="gen">Cargo</label></li>
+        <input type="text" id="cargo" class="form-control col-sm-9" ><br>
        </div>
        <div class="form-group">
-       <li><label for="car">Cargo</label></li>
-        <input type="text" id="car" class="form-control col-sm-9" name="cargo"><br>
+       <li><label for="car">Email</label></li>
+        <input type="email" id="email" class="form-control col-sm-9" ><br>
        </div>
        <div class="form-group">
-       <li><label for="telefono">Telefono</label></li>
-        <input type="number" id="telefono" class="form-control col-sm-9" name="telefono"><br>
+       <li><label for="telefono">Contraseña</label></li>
+        <input type="password" id="contraseña" class="form-control col-sm-9" ><br>
        </div>
        <div class="form-group">
        <li><label for="estado">Estado</label></li><br>

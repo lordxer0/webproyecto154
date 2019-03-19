@@ -21,7 +21,7 @@ class componenteController {
 		$ambientes = ambiente::getAll();
 		//echo "<pre>";
 		// print_r($componentes->fetch_assoc());
-		include '../../public/views/componentes/IndexComponente.php';
+		include '../../public/views/componentes/indexComponente.php';
 		
 	}
 
@@ -43,13 +43,13 @@ class componenteController {
 			if($res == 1){
 				$msg = "componente modificado";
 				$componentes = componente::getall();
-				$ambientes = ambiente::getAll();
-				include '../../public/views/componentes/IndexComponente.php';
+		$ambientes = ambiente::getAll();
+				include '../../public/views/componentes/indexComponente.php';
 			}else{
 				$msg = "Error al editar usuario";
 				$componentes = componente::getall();
 		$ambientes = ambiente::getAll();
-				include '../../public/views/componentes/IndexComponente.php';
+				include '../../public/views/componentes/index.php';
 			}
 		}
 
@@ -58,28 +58,28 @@ class componenteController {
 	public function updateEstado(){
 		if(isset($_GET["ID_Componentes"])){
 			
-			$estado_componente;
-			if($_GET["estado_componente"] == "activo"){
-				$estado_componente = "inactivo";
+			$estadoComponente;
+			if($_GET["estado"] == "activo"){
+				$estadoComponente = "inactivo";
 			}else{
-				$estado_componente = "activo";
+				$estadoComponente = "activo";
 			}
 
 			$componente = new componente();
-			$componente->estado = $estado_componente;
+			$componente->estado = $estadoComponente;
 			$componente->ID_Componentes = $_GET["ID_Componentes"];
 
 			$res = $componente->updateEstado();
 			if($res == 1){
 				$msg = "componente modificado";
 				$componentes = componente::getall();
-				$ambientes = ambiente::getAll();
-				include '../../public/views/componentes/IndexComponente.php';
+		$ambientes = ambiente::getAll();
+				include '../../public/views/componentes/indexComponente.php';
 			}else{
 				$msg = "Error al editar usuario";
 				$componentes = componente::getall();
 		$ambientes = ambiente::getAll();
-				include '../../public/views/componentes/IndexComponente.php';
+				include '../../public/views/componentes/index.php';
 			}
 		}
 
@@ -95,7 +95,7 @@ class componenteController {
 		}
 
 		$componentes = componente::getall();
-		include '../../public/views/componentes/index.php';
+		include '../../public/views/componentes/indexComponente.php';
 	}
 
 	public function create(){
@@ -120,7 +120,7 @@ class componenteController {
 		$ambientes = ambiente::getAll();
 		//echo "<pre>";
 		// print_r($componentes->fetch_assoc());
-		include '../../public/views/componentes/IndexComponente.php';
+		include '../../public/views/componentes/indexComponente.php';
 		}
 	}
 
