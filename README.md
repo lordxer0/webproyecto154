@@ -14,7 +14,7 @@ Manuel Alejandro 	Bolaños yace	manuely532@gmail.com
 
 Yair Andrés 	Tutistas Vidal	  yaiir012@gmail.com
 
-Yulian Andrés López osorio	
+Yulian Andrés López osorio	    Yuliandres322@gmail.com
 
 Geankarlo 	  Paz Muñoz	        genkarlopazmunoz@gmail.com
 
