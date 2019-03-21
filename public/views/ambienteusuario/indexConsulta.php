@@ -7,12 +7,12 @@
     <link rel="stylesheet" type="text/css" href="/domoticSENA/public/css/materialize.min.css">
     <title>ocupados</title>
 </head>
-<body style="font-family: 'arial' ; color: #238276; background-color: #a7ffeb;">
+<body style="font-family: 'arial' ; color: #238276;">
 
 <center><h1>ambientes ocupados </h1></center>
 <center><h2>estos son los ambientes ocupados actualmente en el centro </h2></center>
 
-<?php if($consulta != null)  {?>
+<?php if($consultas != null)  {?>
         <table id="Tabla" class="striped" style="margin-left: 20px; margin-right: 20px; ">
             <thead>
                 <tr>
@@ -22,17 +22,14 @@
                     <th>hora</th>
                 </tr>
 
-                
-
-
                 <tbody class="container" >
                     <?php
-                        while ($row = $consulta->fetch_assoc()){                            
+                        while ($row = $consultas->fetch_assoc()){                            
                             echo "<tr>";
-                            echo "<td>".$row["nombre_ambiente"] ."</td>";
-                            echo "<td>".$row["nombre_usuario"] ."</td>";
-                            echo "<td>".$row["fecha"] ."</td>";
-                            echo "<td>".$row["hora"] ."</td>";                             
+                            echo "<td style='text-align: center;'>".$row["nombre_ambiente"] ."</td>";
+                            echo "<td style='text-align: center;'>".$row["nombre_usuario"] ."</td>";
+                            echo "<td style='text-align: center;'>".$row["fecha"] ."</td>";
+                            echo "<td style='text-align: center;'>".$row["hora"] ."</td>";                             
                             echo "<td>
                             </td>";
                             echo"</tr>";

@@ -7,20 +7,23 @@
     <title>Usuarios</title>
     <link rel="stylesheet" type="text/css" href="/domoticSENA/public/css/materialize.min.css">
 </head>
-<body  style="font-family: 'arial' ; color: #238276; background-color: #a7ffeb;">
+<body  style="font-family: 'arial' ; color: #238276;">
 
-<script>
-let d = new Date();
-document.body.innerHTML = "<h6>La hora es:  " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
-"</h6>"
-</script>
+      <center>
+        <h1>Usuarios</h1>
+      </center>
 
-<a href="/domoticSENA/public/views/usuarios/IndexUsuario.php" class='waves-effect waves-yellow pink btn'>Agregar</a>
-   
-<div class="col s10">
-      <br><br>
-
-      <table>
+      <br>
+        <a href="/domoticSENA/app/controller/usuariocontroller.php?action=create" class='waves-effect waves-yellow btn' style="margin-left: 205px;">Agregar</a>
+        <a href="/domoticSENA/public/views/principal/MenuAdministrador.php" class='waves-effect waves-yellow btn' style="margin-left: 20px;">Atras</a>
+      <br>
+      <br>
+      
+      <br>
+      
+         
+      <div class="container">
+      <table style="border: solid 2px #238276;" class="striped">
         <thead>
         <th>ID_Usuario</th>
         <th>Nombre</th>
@@ -31,6 +34,7 @@ document.body.innerHTML = "<h6>La hora es:  " + d.getHours() + ":" + d.getMinute
         <th>Email</th>
         <th>Contraseña</th>
         <th>Estado</th>
+        <th></th>
         </thead>
         <tbody>
 
@@ -46,7 +50,7 @@ document.body.innerHTML = "<h6>La hora es:  " + d.getHours() + ":" + d.getMinute
           echo "<td>" . $tabla["email"] . "</td>";
           echo "<td>" . $tabla["contraseña"] . "</td>";
           echo "<td>" . $tabla["estado"] . "</td>";
-          
+          echo "<td><a href='/domoticSENA/app/controller/usuariocontroller.php?action=update&ID_Usuario=" . $tabla["ID_Usuario"] . "' class='waves-effect waves-yellow btn'>Editar</a>";
           
           echo "</tr>";
         }

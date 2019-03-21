@@ -12,7 +12,7 @@
         <h1>Ambientes</h1>
     </center>
     <br>
-    <a href="/domoticSENA/public/views/principal/MenuAdministrador.php" class='waves-effect waves-yellow btn' style="margin-left: 225px;">Atras</a>
+    <a href="/domoticSENA/public/views/principal/MenuInstructor.php" class='waves-effect waves-yellow btn' style="margin-left: 225px;">Atras</a>
     <br><br>
 <?php if($ambientes != null) {?>
         <div class="container">

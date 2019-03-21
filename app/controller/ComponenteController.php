@@ -29,10 +29,10 @@ class componenteController {
 		if(isset($_GET["ID_Componentes"])){
 			
 			$abrirCerrar;
-			if($_GET["abrir_cerrar"] == "cerrar"){
-				$abrirCerrar = "abrir";
+			if($_GET["abrir_cerrar"] == "OFF"){
+				$abrirCerrar = "ON";
 			}else{
-				$abrirCerrar = "cerrar";
+				$abrirCerrar = "OFF";
 			}
 
 			$componente = new componente();

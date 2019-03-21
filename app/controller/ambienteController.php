@@ -14,8 +14,13 @@ class ambienteController{
     }
 
     public function all(){
-        $ambientes = ambiente::getAll();        
-        include '../../public/vista/interfaz/indexAmbiente.php';
+        $ambientes = ambiente::getAll();  
+        include '../../public/views/ambienteusuario/indexAmbiente.php';
+    }
+
+    public function allIns(){
+        $ambientes = ambiente::getAll();  
+        include '../../public/views/ambienteusuario/indexAmbienteIns.php';
     }
 
     public function create(){

@@ -13,12 +13,23 @@ class usuario{
     public $email;
     public $contraseña;
     public $estado;
+    public $ID_Perfil;
 
     public static function getall(){
         $sql="select * from usuario";
         $con = new connection();
         $rs = $con -> query($sql);
         $con -> close(); 
+
+        return $rs;
+    }
+
+    public static function perfilId($ID_Perfil){
+        $sql = "select ID_Perfil from perfil";
+
+        $con = new connection();
+        $rs = $con->query($sql);
+        $con->close();
 
         return $rs;
     }
@@ -52,7 +63,8 @@ class usuario{
         '$this->cargo',
         '$this->email',
         '$this->contraseña',
-        $this->estado)";
+        '$this->estado',
+        '$this->ID_Perfil')";
   
         $con = new connection();
         $rs = $con->execute($sql);
@@ -70,7 +82,8 @@ class usuario{
         cargo = '$this->cargo',
         email = '$this->email',
         contraseña = '$this->contraseña',
-        estado_usuario = '$this->estado'
+        estado_usuario = '$this->estado',
+        ID_Perfil = '$this->ID_Perfil'
         where ID_Usuario = '$this->ID_Usuario'";
   
         $con = new connection();

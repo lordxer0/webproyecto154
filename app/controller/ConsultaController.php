@@ -14,7 +14,7 @@ class consultaController{
     }
 
     public function all(){
-        $consulta = consultas::getAll();
+        $consultas = consultas::getAll();
         include '../../public/views/ambienteusuario/indexConsulta.php';
     }
 

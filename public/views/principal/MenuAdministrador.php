@@ -10,11 +10,10 @@
     <meta charset="UTF-8">
     <title>Menu administrador</title>
     <link rel="stylesheet" href="/domoticsena/public/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
 </head>
 
-<body style="font-family: 'arial' ; color: #238276; background-color: #a7ffeb;">
+<body style="font-family: 'arial' ; color: #238276;">
 
     <nav style="background-color: #238276; color: #FFFFFF;">
     <tt style="margin-left: 15px;">
@@ -32,7 +31,7 @@
 
                 <a href="../../../app/controller/ComponenteController.php" style="color: #238276; margin-left: 20px;">Gestion de componentes</a><br><br>
 
-                <a href="../../../app/controller/ConsultaController.php" style="color: #238276; margin-left: 20px;">Gestion de ambiente</a><br><br>
+                <a href="../../../app/controller/ambienteController.php" style="color: #238276; margin-left: 20px;">Gestion de ambiente</a><br><br>
 
                 <a href="../../../app/controller/alarmacontroller.php" style="color: #238276; margin-left: 20px;">Gestion de alarmas</a><br><br><br><br>
 

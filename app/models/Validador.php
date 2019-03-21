@@ -36,8 +36,13 @@ if($_POST){
 				echo "<br><br><a href=panel-control.php>Panel de Control</a>";
 			}
 		}
-	}else{
-		include 'Validador.php';
+	}else{ 
+		?>
+            <script type="text/javascript">
+                alert("NOMBRE DE USUARIO Y / O CLAVE INCORRECTA");
+                location.href="/domoticSENA/public/views/principal/index.php";
+            </script>
+        <?php
 	}
 }
 

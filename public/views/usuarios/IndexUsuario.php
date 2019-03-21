@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/domoticSENA/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/materialize.min.css">
     <title>Document</title>
 </head>
 <body >
@@ -16,7 +16,8 @@
 			<input type="radio" name="estado" value="un">Consultar usuario<br>	
     </div>
     <div class="col-sm-7">
-    <form action="/domoticSENA/app/controller/usuariocontroller.php?action=create" method="post">
+    <form action="/domoticSENA/app/controller/usuariocontroller.php?action=create" method="POST">
+      <input type="hidden" name="val" value="create">
       <div class="form-group">
        <li><label for="cd">ID_Usuario</label></li>
         <input type="number" id="id" class="form-control col-sm-9" ><br>
@@ -45,9 +46,17 @@
        <li><label for="car">Email</label></li>
         <input type="email" id="email" class="form-control col-sm-9" ><br>
        </div>
+
        <div class="form-group">
        <li><label for="telefono">Contraseña</label></li>
         <input type="password" id="contraseña" class="form-control col-sm-9" ><br>
+       </div>
+       <div class="form-group">
+       <li><label for="telefono">ID_perfil</label></li>
+        <select>
+          <option>1</option>
+          <option>2</option>
+        </select>
        </div>
        <div class="form-group">
        <li><label for="estado">Estado</label></li><br>
