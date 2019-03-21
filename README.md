@@ -2,7 +2,7 @@
 
 controlador de sistema domotico
 
-proyecto en construccion del ADSI 154 en web 
+proyecto en construccion del ADSI 154 en web basado en php, html y css utilizando materialize  hay muchas partes del codigo sin comentar pero en general se entienede con los nombres de la variables todo lo que se necesita saber para poder generar la base de datos ... en otro repositorio subiremos el simulador (AGREGAR REPOSITORIO AQUI) en tanto este disponible para que quien sea que lo revise tenga las herramientas completas para probar, o busque adaptarlo a un arduino 
 
 integrantes desarrolladores del aplicativo 
 
